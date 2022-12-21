@@ -19,18 +19,17 @@ class Calculator
 end
 
 describe Calculator do
+  let(:calculator) { Calculator.new }
+
   it "Calculate with sort number" do
-    calculator = Calculator.new
     expect(calculator.reduction(36)).to eql(9)
   end
 
   it "Calculate with mid number" do
-    calculator = Calculator.new
     expect(calculator.reduction(15)).to eql(6)
   end
 
   it "Calculate with long number" do
-    calculator = Calculator.new
     expect(calculator.reduction(205989897)).to eql(3)
   end
 end
